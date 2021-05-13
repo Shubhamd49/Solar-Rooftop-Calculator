@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solar Calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body {
+  			background-image: url('images/solarpanel.jpg');
+			  background-repeat: no-repeat;
+			  background-attachment: fixed;
+			  background-size: 100% 100%;
+			  height: 100%;
+ 
+}
+		@media only screen and (max-width:800px) {
+		    .main {
+				width: 80%;
+			    padding: 0;
+			  }
+			.right {
+			   	width: 100%;
+			  }
+			}
+		@media only screen and (max-width:500px) {
+  			.menu, .main, .right {
+    			width: 100%;
+  				}
+			}
+		.menu{
+			width: 100%;
+			padding: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 0%;
+			margin-right: 0%;
+		}
+		.heading{
+			color: orange;
+			word-spacing: 10px;
+			width: 100%;
+			font-size:50px;
+		}
+		.linkrow{
+			margin-right: 20px;
+		}
+		.linktag{
+			color: tomato; 
+			text-decoration: none;
+		}
+		.secondhead{
+			font-size: 40px;
+				margin-block-start:0cm;
+				margin-block-end:1cm;
+				width: 100%;
+		}
+		.main{
+			font-size: 25px;
+			height: 100%;
+			width: 100%;
+			border-spacing: 0px;
+			float: left;
+			overflow: hidden;
+		}
+		.submitbut{
+			background-color: skyblue;
+		}
+	</style>
+	<table border="0" cellpadding="0px"   class="menu">
+		<tr><td><img src="PATH TO LOGO FILE" height="80px" width="200px"></td>
+			<th width="5000" text-align="left">
+				<h1 align="center" class="heading"> SOLAR ROOFTOP CALCULATOR</h1>
+			</th>
+			<td class="linkrow">
+				<a href="COMPANY WEBSITE LINK/" class="linktag" target="_blank" ><h1> HOME</h1> </td>
+		</tr>
+	</table>
+	<h3 class="secondhead">Calculate your solar generation here & start saving now! </h3>
+	<form id="form1" action="output.php" method="post">
+		<table border="7" class="main"><thead>
+			<tr>
+				<td>Enter total rooftop area:</td>
+				<td><input type="number" name="area" min="0" required></td>
+				<td><input type="radio" name="radio" value="0.092903" required> Sq.Feet
+  					<input type="radio" name="radio" value="1" checked required> Sq.m. 
+  				</td>
+			</tr>
+			<tr>
+				<td>% of rooftop area available:</td>
+				<td colspan="2"><input type="number" name="%area" min="1" max="100" required>%</td>
+			</tr>
+			<tr>
+				<td>What is your average electricity cost? </td>
+				<td colspan="2">Rs./kWh<input type="number" name="cost" min="1" required></h1></td>
+			</tr>
+			<tr>
+				<td>Select your state:</td>
+				<td colspan="2">
+					<select required='Yes'  name='state'>
+						<option value="" selected disabled hidden>Select State</option>
+						<option value="4.6">ANDAMAN and NICOBAR ISLANDS</option>
+						<option value="5">ANDHRA PRADESH</option>
+						<option value="4.1">ARUNACHAL PRADESH</option>
+						<option value="4.1">ASSAM</option>
+						<option value="4.6">BIHAR</option>
+						<option value="4.6">CHANDIGARH</option>
+						<option value="5">CHHATTISGARH</option>
+						<option value="5">DADRA AND NAGAR HAVELI</option>
+						<option value="5">DAMAN AND DIU</option>
+						<option value="5">GOA</option>
+						<option value="5">GUJARAT</option>
+						<option value="4.6">HARYANA</option>
+						<option value="4.1">HIMACHAL PRADESH</option>
+						<option value="4.1">JAMMU AND KASHMIR</option>
+						<option value="4.6">JHARKHAND</option>
+						<option value="5">KARNATAKA</option>
+						<option value="5">KERALA</option>
+						<option value="5">LAKSHADWEEP</option>
+						<option value="5">MADHYA PRADESH</option>
+						<option value="5">MAHARASHTRA</option>
+						<option value="4.1">MANIPUR</option>
+						<option value="4.1">MEGHALAYA</option>
+						<option value="4.1">MIZORAM</option>
+						<option value="4.1">NAGALAND</option>
+						<option value="4.6">NCT OF DELHI</option>
+						<option value="4.6">ORISSA</option>
+						<option value="5">PUDUCHERRY</option>
+						<option value="4.6">PUNJAB</option>
+						<option value="5">RAJASTHAN</option>
+						<option value="4.1">SIKKIM</option>
+						<option value="5">TAMIL NADU</option>
+						<option value="5">TELANGANA</option>
+						<option value="4.1">TRIPURA</option>
+						<option value="4.6">UTTAR PRADESH</option>
+						<option value="4.1">UTTARAKHAND</option>
+						<option value="4.6">WEST BENGAL</option>	
+					</select>
+				</td>
+			</tr>
+			<tr><td >Enter subsidy Percentage</td>
+				<td colspan="2"><input type="number" name="p123" min="0" max="70" required>%</td>
+			</tr>
+			<tr>
+				<td>Select customer catagory</td>
+				<td colspan="2">
+					<select required="Yes" name='cc' >
+						<option value="" selected disabled hidden>Select Catagory of Customer</option>
+  						<option value="1">RESIDENTIAL</option>
+  						<option value="1">INSTITUTIONAL</option>			
+  						<option value="0">INDUSTRIAL</option>
+  						<option value="0">COMMERCIAL</option>
+  						<option value="0">GOVERMENT</option>
+  						<option value="1">SOCIAL SECTOR</option>
+					</select>
+				</td>
+			</tr>
+		</thead>
+	</table>
+	</form><br>
+	<table border="3px" align="center" class="right">
+		<thead>
+			<tr>
+				<td align="center">
+					<button type="submit" name="submit" class="submitbut" form="form1">
+						<h1 align="center">Calculate</h1>
+					</button>
+				</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>
